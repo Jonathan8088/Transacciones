@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Principal</title>
+    </h:head>
+    <h:body>
+        <h:form>
+
+            <p:accordionPanel >
+                <p:tab title="No Transaccional">
+                    <h:panelGrid  id="grid" columns="2">
+
+                        <p:outputLabel value="Id: "/>
+                        <p:inputText value="#{logica.persona.id}" />
+
+                        <p:outputLabel value="Nombre: "/>
+                        <p:inputText value="#{logica.persona.nombre}"/>
+
+                        <p:outputLabel value="Id: "/>
+                        <p:inputText value="#{logica.persona2.id}"/>
+
+                        <p:outputLabel value="Nombre: "/>
+                        <p:inputText value="#{logica.persona2.nombre}"/>
+
+                        <p:commandButton value="Guardar Required" action="#{logica.guardarPersona(logica.persona,logica.persona2)}"/>
+
+                        <p:commandButton value="Guardar Required New" action="#{logica.guardarPersonaRequiredNew(logica.persona, logica.persona2)}"/>
+
+                        <p:commandButton value="Guardar Mandatory" action="#{logica.guardarPersonaMandatory(logica.persona, logica.persona2)}" />
+
+                        <p:commandButton value="Guardar Supports" action="#{logica.guardarPersonaSuported(logica.persona, logica.persona2)}" />
+
+                        <p:commandButton value="Guardar Not Supported" action="#{logica.guardarPersonaNotSuported(logica.persona, logica.persona2)}" />
+
+                        <p:commandButton value="Guardar Never" action="#{logica.guardarPersonaNever(logica.persona, logica.persona2)}"/>
+
+
+                    </h:panelGrid>
+                </p:tab>
+                <p:tab title="Transaccionales">
+                    <h:panelGrid  id="grid2" columns="2">
+
+                        <p:outputLabel value="Animal: " />
+                        <p:inputText value="#{logica.bestias.bestia}" />
+
+                        <p:outputLabel value="Id: " />
+                        <p:inputText value="#{logica.elemento.id}" />
+
+                        <p:outputLabel value="Objeto: " />
+                        <p:inputText value="#{logica.elemento.objeto}" />
+
+                        <p:outputLabel value="Id: " />
+                        <p:inputText value="#{logica.elemento2.id}" />
+
+                        <p:outputLabel value="Objeto: " />
+                        <p:inputText value="#{logica.elemento2.objeto}" />
+
+                        <p:commandButton value="Guardar Required" action="#{logica.guardarTransaccionRequired(logica.elemento, logica.elemento2, logica.bestia)}" />
+
+                        <p:commandButton value="Guardar Required Ner" action="#{logica.guardarTransaccionRequiredNew(logica.elemento, logica.elemento2, logica.bestia)}"/>
+
+                        <p:commandButton value="Guardar Mandatory" action="#{logica.guardarTransaccionMandatory(logica.elemento, logica.elemento2, logica.bestia)}"/>
+                        
+                        <p:commandButton value="Guardar Supports" action="#{logica.guardarTransaccionSuported(logica.elemento, logica.elemento2, logica.bestia)}"/>
+
+                        <p:commandButton value="Guardar Nor Supported" action="#{logica.guardarTransaccionNotSupports(logica.elemento, logica.elemento2, logica.bestia)}" />
+                        
+                        <p:commandButton value="Guardar Never" action="#{logica.guardarTransaccionNever(logica.elemento, logica.elemento2, logica.bestia)}"/>
+
+                    </h:panelGrid>
+                </p:tab>
+            </p:accordionPanel>
+        </h:form>
+    </h:body>
+</html>
+

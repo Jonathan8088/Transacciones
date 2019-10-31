@@ -1,0 +1,14 @@
+Persistencia\UsuarioFacade.class
+Entity\Animal.class
+Interfaces\AbstractFacade.class
+Interfaces\AnimalFacadeLocal.class
+Interfaces\UsuarioFacadeLocal.class
+Entity\Objeto.class
+Entity\Usuario.class
+Persistencia\ObjetoFacade.class
+Entity\Objeto_.class
+com\mycompany\Transacciones.class
+Entity\Usuario_.class
+Interfaces\ObjetoFacadeLocal.class
+Entity\Animal_.class
+Persistencia\AnimalFacade.class
